@@ -4,7 +4,8 @@
 		faAddressBook,
 		faAddressCard,
 		faDiagramProject,
-		faHome
+		faHome,
+		faQuestion
 	} from '@fortawesome/free-solid-svg-icons';
 	import { colors } from '$lib/constants/colors';
 
@@ -29,7 +30,7 @@
 			type="button"
 			command="show-modal"
 			commandfor="mobile-menu"
-			class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200"
+			class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 font-bold text-pink-500"
 			on:click={toggleSidebar}
 		>
 			<span class="sr-only">Open main menu</span>
@@ -78,36 +79,20 @@
 >
 	<div class="flex flex-col gap-4 px-4 py-6 text-gray-800">
 		<a
-			href="#home"
-			class="flex items-center gap-2 text-xl/6 font-semibold text-black hover:text-gray-300"
+			href="/"
+			class="flex items-center gap-2 text-xl/6 font-semibold text-pink-500 hover:text-pink-600"
 			on:click={() => (open = false)}
 		>
 			<Icon data={faHome} class="h-5 w-5" />
 			<div>Home</div></a
 		>
 		<a
-			href="#projects"
-			class="flex items-center gap-2 text-xl/6 font-semibold text-black hover:text-gray-300"
+			href="/quizz"
+			class="flex items-center gap-2 text-xl/6 font-semibold text-pink-500 hover:text-pink-600"
 			on:click={() => (open = false)}
 		>
-			<Icon data={faDiagramProject} class="h-5 w-5" />
-			<div>Protofolio</div></a
-		>
-		<a
-			href="#about"
-			class="flex items-center gap-2 text-xl/6 font-semibold text-black hover:text-gray-300"
-			on:click={() => (open = false)}
-		>
-			<Icon data={faAddressCard} class="h-5 w-5" />
-			<div>About</div></a
-		>
-		<a
-			href="#contact"
-			class="flex items-center gap-2 text-xl/6 font-semibold text-black hover:text-gray-300"
-			on:click={() => (open = false)}
-		>
-			<Icon data={faAddressBook} class="h-5 w-5" />
-			<div>Contact</div></a
+			<Icon data={faQuestion} class="h-5 w-5" />
+			<div>Quizz</div></a
 		>
 	</div>
 </div>

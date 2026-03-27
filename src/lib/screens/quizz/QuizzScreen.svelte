@@ -80,7 +80,9 @@
 	}
 </script>
 
-<div class="flex w-full justify-between bg-pink-500 px-4 py-8 lg:px-8 xl:px-88">
+<div
+	class="flex w-full flex-col items-center justify-between gap-4 bg-pink-500 px-4 py-8 md:flex-row lg:px-8 xl:px-88"
+>
 	<h2 class="text-3xl font-semibold text-white">Personality Quiz</h2>
 	<div class="flex gap-4">
 		<button
@@ -94,7 +96,9 @@
 	</div>
 </div>
 <div id="home" style="background-color: {colors.lightBlue};" class="px-4 py-20 lg:px-8 xl:px-16">
-	<div class="items-left flex flex-col-reverse justify-center p-6 sm:mt-0 md:gap-32 lg:flex-row">
+	<div
+		class="items-left flex flex-col-reverse justify-center gap-4 p-6 sm:mt-0 md:gap-32 lg:flex-row"
+	>
 		<div class="flex max-w-2xl flex-col gap-4">
 			<div
 				style="color: {colors.darkIndigo}"
@@ -125,8 +129,10 @@
 				{/each}
 			</div>
 		</div>
-		<div class="rounded-3xl bg-white p-4">
-			<div class="h-80 w-full max-w-xs md:h-110 md:max-w-sm">
+		<div class="flex items-center justify-center rounded-3xl bg-white p-4">
+			<div
+				class="mx-auto flex h-80 w-full max-w-xs items-center justify-center md:h-110 md:max-w-xl lg:max-w-sm"
+			>
 				<img
 					src={quiz.questions[currentIndex].image}
 					alt="img"
@@ -138,19 +144,29 @@
 </div>
 <div
 	style="background-color: {colors.lightBlue};"
-	class="flex w-full justify-between border border-pink-500 px-4 py-8 lg:px-8 xl:px-88"
+	class="flex w-full items-center justify-between px-4 py-8 lg:px-8 xl:px-88"
 >
+	<!-- LEFT -->
 	<button
 		on:click={() => prevClick()}
-		class="flex w-[190px] items-center justify-center gap-2 rounded-xl bg-pink-500 px-8 py-2 text-white hover:bg-pink-600"
+		class="flex w-[90px] items-center justify-center gap-2 rounded-xl bg-pink-500 px-8 py-2 text-white hover:bg-pink-600 md:w-[190px]
+		{currentIndex === 0 ? 'invisible' : ''}"
 	>
-		<ArrowLeft /> Previously
+		<ArrowLeft /> <span class="hidden md:inline">Previously</span>
 	</button>
-	<div class="text-xl font-semibold text-pink-500">{currentPage}/{quiz.questions.length}</div>
+
+	<!-- CENTER -->
+	<div class="text-center text-xl font-semibold text-pink-500">
+		{currentPage}/{quiz.questions.length}
+	</div>
+
+	<!-- RIGHT -->
 	<button
 		on:click={() => nextClick()}
-		class="flex w-[190px] items-center justify-center gap-2 rounded-xl bg-pink-500 px-8 py-2 text-white hover:bg-pink-600"
+		class="flex w-[90px] items-center justify-center gap-2 rounded-xl bg-pink-500 px-8 py-2 text-white hover:bg-pink-600 md:w-[190px]
+		{currentIndex === quiz.questions.length - 1 ? 'invisible' : ''}"
 	>
-		Next <ArrowRight />
+		<span class="hidden md:inline">Next</span>
+		<ArrowRight />
 	</button>
 </div>
