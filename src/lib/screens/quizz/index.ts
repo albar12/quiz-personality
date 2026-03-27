@@ -1,0 +1,1 @@
+export { default as QuizzScreen } from './QuizzScreen.svelte';
