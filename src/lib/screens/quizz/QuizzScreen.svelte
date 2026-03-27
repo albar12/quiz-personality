@@ -69,7 +69,7 @@
 			text: 'Your current answers will be lost if you leave this page.',
 			icon: 'question',
 			showCancelButton: true,
-			confirmButtonText: 'Yes, submit!',
+			confirmButtonText: 'Yes, go back!',
 			cancelButtonText: 'Cancel'
 		}).then((result) => {
 			if (result.isConfirmed) {
