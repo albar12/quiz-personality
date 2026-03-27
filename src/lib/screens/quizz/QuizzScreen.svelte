@@ -144,7 +144,7 @@
 </div>
 <div
 	style="background-color: {colors.lightBlue};"
-	class="flex w-full items-center justify-between px-4 py-8 lg:px-8 xl:px-88"
+	class="relative z-50 flex w-full items-center justify-between px-4 py-8 lg:px-8 xl:px-88"
 >
 	<!-- LEFT -->
 	<button

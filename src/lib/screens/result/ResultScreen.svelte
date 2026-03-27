@@ -136,7 +136,7 @@
 		<a href="/">
 			<button
 				class="flex items-center gap-2 rounded-xl border border-white px-8 py-2 text-white hover:bg-white hover:text-pink-500"
-				><Home /> <span class="hidden md:inline"> Return</span></button
+				><Home /> <span class="hidden md:inline"> Home</span></button
 			>
 		</a>
 
